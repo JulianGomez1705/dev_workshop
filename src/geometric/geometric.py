@@ -1,71 +1,54 @@
+import math
+
 class Geometria:
-    """
-    Class with geometric exercises.
-    Include basic and funny operations in 2D and 3D.
-    """
+    # Class with geometric exercises.
+    # Include basic and funny operations in 2D and 3D.
     
     def area_rectangulo(self, base, altura):
-        """
-        Calcula el área de un rectángulo.
-        
-        Args:
-            base (float): Longitud de la base del rectángulo
-            altura (float): Altura del rectángulo
-            
-        Returns:
-            float: Área del rectángulo
-        """
-        return base*altura
-    
+        # Calcula el área de un rectángulo.
+        return base * altura
+
     def perimetro_rectangulo(self, base, altura):
-        """
-        Calcula el perímetro de un rectángulo.
-        
-        Args:
-            base (float): Longitud de la base del rectángulo
-            altura (float): Altura del rectángulo
-            
-        Returns:
-            float: Perímetro del rectángulo
-        """
-        pass
-    
+        # Calcula el perímetro de un rectángulo.
+        return 2 * (base + altura)
+
     def area_circulo(self, radio):
-        """
-        Calcula el área de un círculo.
-        
-        Args:
-            radio (float): Radio del círculo
-            
-        Returns:
-            float: Área del círculo
-        """
-        pass
-    
+        # Calcula el área de un círculo.
+        return round(math.pi * radio ** 2, 2)
+
     def perimetro_circulo(self, radio):
-        """
-        Calcula el perímetro (circunferencia) de un círculo.
-        
-        Args:
-            radio (float): Radio del círculo
-            
-        Returns:
-            float: Perímetro del círculo
-        """
-        pass
-    
+        # Calcula el perímetro de un círculo.
+        return round(2 * math.pi * radio, 2)
+
     def area_triangulo(self, base, altura):
-        """
-        Calcula el área de un triángulo.
-        
-        Args:
-            base (float): Longitud de la base del triángulo
-            altura (float): Altura del triángulo
-            
-        Returns:
-            float: Área del triángulo
-        """
-        pass
+        # Calcula el área de un triángulo.
+        return (base * altura) / 2
+    
+    def perimetro_triangulo(self, lado1, lado2, lado3):
+        # Calcula el perímetro de un triángulo.
+        return lado1 + lado2 + lado3
+
+    def es_triangulo_valido(self, lado1, lado2, lado3):
+        # Verifica si tres longitudes pueden formar un triángulo válido.
+        return (lado1 + lado2 > lado3 and lado1 + lado3 > lado2 and lado2 + lado3 > lado1)
+
+    def area_trapecio(self, base_mayor, base_menor, altura):
+        # Calcula el área de un trapecio.
+        return ((base_mayor + base_menor) * altura) / 2
+
+    def area_rombo(self, diagonal_mayor, diagonal_menor):
+        # Calcula el área de un rombo usando sus diagonales.
+        return (diagonal_mayor * diagonal_menor) / 2
+
+    def area_pentagono_regular(self, lado, apotema):
+        # Calcula el área de un pentágono regular.
+        return (5 * lado * apotema) / 2
+    
+    def perimetro_pentagono_regular(self, lado):
+        # Calcula el perímetro de un pentágono regular.
+        return 5 * lado
+
+
     
     def perimetro_triangulo(self, lado1, lado2, lado3):
         """
