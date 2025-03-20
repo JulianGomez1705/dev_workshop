@@ -44,7 +44,6 @@ class Data:
             if elemento not in elementos_vistos:
                 elementos_vistos.add(clave)
                 lista_sin_duplicados.append(elemento)
-                elementos_vistos.add(elemento)
         return lista_sin_duplicados
     
     def merge_ordenado(self, lista1, lista2):
