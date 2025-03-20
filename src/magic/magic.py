@@ -74,7 +74,7 @@ class Magic:
                 primos.append(num)
         return primos
     
-    def es_numero_perfecto(self, n):
+    def es_numero_perfecto(self, numero):
         """
         Verifica si un número es perfecto (igual a la suma de sus divisores propios).
         
@@ -84,8 +84,10 @@ class Magic:
         Returns:
             bool: True si n es un número perfecto, False en caso contrario
         """
-        suma = sum(i for i in range(1, n) if n % i == 0)
-        return suma == n
+        if numero <= 1:
+            return False
+        suma = sum(i for i in range(1, numero) if numero % i == 0)
+        return suma == numero
     
     def triangulo_pascal(self, filas):
         """
