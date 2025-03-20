@@ -33,15 +33,11 @@ class Data:
         """
         Elimina elementos duplicados de una lista sin usar set().
         """
-        lista_sin_duplicados = []
-        elementos_vistos = set()
-        
-        for elemento in lista:
-            clave=(type(elemento),elemento)
-            if elemento not in elementos_vistos:
-                elementos_vistos.add(clave)
-                lista_sin_duplicados.append(elemento)
-        return lista_sin_duplicados
+        result = []
+        for item in lista:
+            if not any(item is x for x in result):
+                result.append(item)
+            return result
     
     def merge_ordenado(self, lista1, lista2):
         """
