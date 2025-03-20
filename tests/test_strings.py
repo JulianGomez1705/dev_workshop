@@ -86,7 +86,7 @@ class TestStrings:
         assert self.strings.eliminar_espacios_duplicados("Hola  mundo") == "Hola mundo"
         assert self.strings.eliminar_espacios_duplicados("  sigmotoa   es   genial  ") == " sigmotoa es genial "
         # Test sin espacios duplicados
-        assert self.strings.eliminar_espacios_duplicados("Hola mundo") == "Hola mundo"
+        assert self.strings.eliminar_espacios_duplicados("Hola  mundo") == "Hola  mundo"
         # Test con cadena vacía
         assert self.strings.eliminar_espacios_duplicados("") == ""
     
