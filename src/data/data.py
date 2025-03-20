@@ -33,9 +33,6 @@ class Data:
         """
         Elimina elementos duplicados de una lista sin usar set().
         """
-        if not isinstance(lista, list):
-            raise TypeError("El argumento debe ser una lista")
-        
         lista_sin_duplicados = []
         elementos_vistos = set()
         
