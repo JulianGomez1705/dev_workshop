@@ -153,7 +153,7 @@ class Data:
         """
         Calcula la transpuesta de una matriz.
         """
-        if not isinstance(matriz, list) or not all(isinstance(fila, list) for fila in matriz):
-            raise TypeError("El argumento debe ser una lista de listas")
         
+        if not matriz:
+            return []  # Caso de matriz vacía
         return [[fila[i] for fila in matriz] for i in range(len(matriz[0]))]
