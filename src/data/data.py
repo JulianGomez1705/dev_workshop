@@ -40,6 +40,7 @@ class Data:
         elementos_vistos = set()
         
         for elemento in lista:
+            clave=(type(elemento),elemento)
             if elemento not in elementos_vistos:
                 lista_sin_duplicados.append(elemento)
                 elementos_vistos.add(elemento)
