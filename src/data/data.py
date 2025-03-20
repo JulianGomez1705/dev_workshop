@@ -38,6 +38,7 @@ class Data:
             if not any(item is x for x in result):
                 result.append(item)
             return result
+        pass
     
     def merge_ordenado(self, lista1, lista2):
         """
